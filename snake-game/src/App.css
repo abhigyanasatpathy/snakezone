@@ -1,0 +1,37 @@
+/* src/App.css */
+.game-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image:url(../public/bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snake-dot {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: #02ee12;
+  border-radius: 50%; /* Round the corners to make it look like a dot */
+  border: 1px solid #fff; /* Add a white border for a cleaner look */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow to give it depth */
+}
+
+
+.snake-food {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: rgb(217, 255, 0);
+  animation: spin 2s linear infinite;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
